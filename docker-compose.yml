@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  samba:
+    build: .
+    container_name: smb-server
+    ports:
+      - "1139:139"
+      - "4445:445"
+    volumes:
+      - ./shared-data:/shared/public
+    restart: unless-stopped
+    hostname: smbserver
+    networks:
+      - smb-network
+
+networks:
+  smb-network:
+    driver: bridge

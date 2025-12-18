@@ -1,0 +1,6 @@
+Hello from SMB Server!
+
+This is a test file served via Samba.
+You are successfully reading this file from the SMB share.
+
+Current timestamp: 2025-12-17
